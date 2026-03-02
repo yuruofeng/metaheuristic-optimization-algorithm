@@ -76,7 +76,8 @@ export function getCategoryColor(category: AlgorithmCategory): string {
 export const ALGORITHMS: Algorithm[] = [
   {
     id: 'GWO',
-    name: 'GWO',
+    name: '灰狼优化器',
+    shortName: 'GWO',
     fullName: 'Grey Wolf Optimizer',
     version: '2.0.0',
     description: '灰狼优化器，模拟灰狼群体的领导层级和狩猎行为',
@@ -94,7 +95,8 @@ export const ALGORITHMS: Algorithm[] = [
   },
   {
     id: 'ALO',
-    name: 'ALO',
+    name: '蚁狮优化器',
+    shortName: 'ALO',
     fullName: 'Ant Lion Optimizer',
     version: '2.0.0',
     description: '蚁狮优化器，模拟蚁狮幼虫捕食蚂蚁的行为',
@@ -111,7 +113,8 @@ export const ALGORITHMS: Algorithm[] = [
   },
   {
     id: 'WOA',
-    name: 'WOA',
+    name: '鲸鱼优化算法',
+    shortName: 'WOA',
     fullName: 'Whale Optimization Algorithm',
     version: '2.0.0',
     description: '鲸鱼优化算法，模拟座头鲸的气泡网捕食策略',
@@ -130,7 +133,8 @@ export const ALGORITHMS: Algorithm[] = [
   },
   {
     id: 'IGWO',
-    name: 'IGWO',
+    name: '改进灰狼优化器',
+    shortName: 'IGWO',
     fullName: 'Improved Grey Wolf Optimizer',
     version: '2.0.0',
     description: '改进灰狼优化器，引入距离学习启发式搜索机制',
@@ -148,7 +152,8 @@ export const ALGORITHMS: Algorithm[] = [
   },
   {
     id: 'EWOA',
-    name: 'EWOA',
+    name: '增强鲸鱼优化算法',
+    shortName: 'EWOA',
     fullName: 'Enhanced Whale Optimization Algorithm',
     version: '2.0.0',
     description: '增强鲸鱼优化算法，引入汇聚机制和Cauchy分布',
@@ -169,7 +174,8 @@ export const ALGORITHMS: Algorithm[] = [
   },
   {
     id: 'DA',
-    name: 'DA',
+    name: '蜻蜓算法',
+    shortName: 'DA',
     fullName: 'Dragonfly Algorithm',
     version: '2.0.0',
     description: '蜻蜓算法，模拟蜻蜓静态和动态群集行为',
@@ -192,7 +198,8 @@ export const ALGORITHMS: Algorithm[] = [
   },
   {
     id: 'BDA',
-    name: 'BDA',
+    name: '二进制蜻蜓算法',
+    shortName: 'BDA',
     fullName: 'Binary Dragonfly Algorithm',
     version: '2.0.0',
     description: '二进制蜻蜓算法，使用V3传递函数进行二进制优化',
@@ -209,7 +216,8 @@ export const ALGORITHMS: Algorithm[] = [
   },
   {
     id: 'BBA',
-    name: 'BBA',
+    name: '二进制蝙蝠算法',
+    shortName: 'BBA',
     fullName: 'Binary Bat Algorithm',
     version: '2.0.0',
     description: '二进制蝙蝠算法，使用V型传递函数将速度转换为翻转概率',
@@ -231,7 +239,8 @@ export const ALGORITHMS: Algorithm[] = [
   },
   {
     id: 'GA',
-    name: 'GA',
+    name: '遗传算法',
+    shortName: 'GA',
     fullName: 'Genetic Algorithm',
     version: '2.0.0',
     description: '遗传算法，模拟自然选择和遗传机制',
@@ -251,7 +260,8 @@ export const ALGORITHMS: Algorithm[] = [
   },
   {
     id: 'SA',
-    name: 'SA',
+    name: '模拟退火算法',
+    shortName: 'SA',
     fullName: 'Simulated Annealing',
     version: '2.0.0',
     description: '模拟退火算法，模拟金属退火过程',
@@ -270,7 +280,8 @@ export const ALGORITHMS: Algorithm[] = [
   },
   {
     id: 'VPSO',
-    name: 'VPSO',
+    name: '变速度粒子群算法',
+    shortName: 'VPSO',
     fullName: 'Variable Velocity PSO',
     version: '2.0.0',
     description: '变速度粒子群优化算法',
@@ -287,7 +298,8 @@ export const ALGORITHMS: Algorithm[] = [
   },
   {
     id: 'VPPSO',
-    name: 'VPPSO',
+    name: '变参数粒子群算法',
+    shortName: 'VPPSO',
     fullName: 'Variable Parameter PSO',
     version: '2.0.0',
     description: '变参数粒子群优化算法',
@@ -304,7 +316,8 @@ export const ALGORITHMS: Algorithm[] = [
   },
   {
     id: 'WOASA',
-    name: 'WOA-SA',
+    name: '鲸鱼-模拟退火混合算法',
+    shortName: 'WOA-SA',
     fullName: 'WOA-SA Hybrid Algorithm',
     version: '2.0.0',
     description: '鲸鱼优化与模拟退火混合算法',
@@ -321,7 +334,8 @@ export const ALGORITHMS: Algorithm[] = [
   },
   {
     id: 'MFO',
-    name: 'MFO',
+    name: '飞蛾火焰优化算法',
+    shortName: 'MFO',
     fullName: 'Moth-Flame Optimization',
     version: '2.0.0',
     description: '飞蛾火焰优化算法，模拟飞蛾横向导航行为',
@@ -340,7 +354,8 @@ export const ALGORITHMS: Algorithm[] = [
   },
   {
     id: 'MVO',
-    name: 'MVO',
+    name: '多元宇宙优化算法',
+    shortName: 'MVO',
     fullName: 'Multi-Verse Optimizer',
     version: '2.0.0',
     description: '多元宇宙优化算法，模拟宇宙中白洞、黑洞和虫洞机制',
@@ -360,7 +375,8 @@ export const ALGORITHMS: Algorithm[] = [
   },
   {
     id: 'SCA',
-    name: 'SCA',
+    name: '正弦余弦算法',
+    shortName: 'SCA',
     fullName: 'Sine Cosine Algorithm',
     version: '2.0.0',
     description: '正弦余弦算法，基于正弦和余弦函数的优化方法',
@@ -379,7 +395,8 @@ export const ALGORITHMS: Algorithm[] = [
   },
   {
     id: 'SSA',
-    name: 'SSA',
+    name: '樽海鞘群算法',
+    shortName: 'SSA',
     fullName: 'Salp Swarm Algorithm',
     version: '2.0.0',
     description: '樽海鞘群算法，模拟樽海鞘群体链状行为',
@@ -397,7 +414,8 @@ export const ALGORITHMS: Algorithm[] = [
   },
   {
     id: 'GOA',
-    name: 'GOA',
+    name: '蚱蜢优化算法',
+    shortName: 'GOA',
     fullName: 'Grasshopper Optimization Algorithm',
     version: '2.0.0',
     description: '蚱蜢优化算法，模拟蚱蜢群体行为的元启发式算法',
@@ -417,7 +435,8 @@ export const ALGORITHMS: Algorithm[] = [
   },
   {
     id: 'PSOGSA',
-    name: 'PSOGSA',
+    name: '混合粒子群-引力搜索算法',
+    shortName: 'PSOGSA',
     fullName: 'Hybrid PSO-GSA Algorithm',
     version: '2.0.0',
     description: '混合粒子群-引力搜索算法，融合PSO的社会学习能力和GSA的物理引力机制',
@@ -437,7 +456,8 @@ export const ALGORITHMS: Algorithm[] = [
   },
   {
     id: 'HLBDA',
-    name: 'HLBDA',
+    name: '超学习二进制蜻蜓算法',
+    shortName: 'HLBDA',
     fullName: 'Hyper Learning Binary Dragonfly Algorithm',
     version: '2.0.0',
     description: '超学习二进制蜻蜓算法，专门用于特征选择和二进制优化问题',

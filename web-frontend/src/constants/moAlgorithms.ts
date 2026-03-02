@@ -23,7 +23,8 @@ export function getMOAlgorithmColor(algorithmId: string): string {
 export const MO_ALGORITHMS: Algorithm[] = [
   {
     id: 'MOALO',
-    name: 'MOALO',
+    name: '多目标蚁狮优化器',
+    shortName: 'MOALO',
     fullName: 'Multi-Objective Ant Lion Optimizer',
     version: '1.0.0',
     description: '多目标蚁狮优化器，将蚁狮优化算法扩展到多目标优化领域',
@@ -41,7 +42,8 @@ export const MO_ALGORITHMS: Algorithm[] = [
   },
   {
     id: 'MODA',
-    name: 'MODA',
+    name: '多目标蜻蜓算法',
+    shortName: 'MODA',
     fullName: 'Multi-Objective Dragonfly Algorithm',
     version: '1.0.0',
     description: '多目标蜻蜓算法，使用Pareto支配关系和存档机制',
@@ -59,7 +61,8 @@ export const MO_ALGORITHMS: Algorithm[] = [
   },
   {
     id: 'MOGOA',
-    name: 'MOGOA',
+    name: '多目标蚱蜢优化算法',
+    shortName: 'MOGOA',
     fullName: 'Multi-Objective Grasshopper Optimization Algorithm',
     version: '1.0.0',
     description: '多目标蚱蜢优化算法，模拟蚱蜢群体社会交互行为',
@@ -79,7 +82,8 @@ export const MO_ALGORITHMS: Algorithm[] = [
   },
   {
     id: 'MOGWO',
-    name: 'MOGWO',
+    name: '多目标灰狼优化器',
+    shortName: 'MOGWO',
     fullName: 'Multi-Objective Grey Wolf Optimizer',
     version: '1.0.0',
     description: '多目标灰狼优化器，使用超立方体网格选择机制',
@@ -98,7 +102,8 @@ export const MO_ALGORITHMS: Algorithm[] = [
   },
   {
     id: 'MSSA',
-    name: 'MSSA',
+    name: '多目标樽海鞘群算法',
+    shortName: 'MSSA',
     fullName: 'Multi-Objective Salp Swarm Algorithm',
     version: '1.0.0',
     description: '多目标樽海鞘群算法，采用领导者-跟随者模型',

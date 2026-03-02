@@ -43,6 +43,7 @@ export interface OptimizationResult {
 export interface Algorithm {
   id: string;
   name: string;
+  shortName?: string;
   fullName: string;
   version: string;
   description: string;

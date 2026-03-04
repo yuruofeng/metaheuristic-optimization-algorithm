@@ -1,29 +1,40 @@
-# 元启发式优化算法平台
+# 🧠 元启发式优化算法平台
 
-**版本**: 2.3.0
-**发布日期**: 2026年3月
-**作者**: RUOFENG YU
+<p align="center">
+  <img src="https://img.shields.io/badge/version-2.4.0-blue.svg" alt="Version">
+  <img src="https://img.shields.io/badge/MATLAB-R2024a-orange.svg" alt="MATLAB">
+  <img src="https://img.shields.io/badge/Python-3.10+-green.svg" alt="Python">
+  <img src="https://img.shields.io/badge/React-19-61DAFB.svg" alt="React">
+  <img src="https://img.shields.io/badge/License-BSD_2--Clause-purple.svg" alt="License">
+</p>
+
+<p align="center">
+  <strong>作者</strong>: RUOFENG YU &nbsp;|&nbsp; <strong>发布日期</strong>: 2026年3月
+</p>
 
 ---
 
-## 项目简介
+## 📖 项目简介
 
 本项目是一个符合工业规范的元启发式优化算法平台，实现了多种经典和改进算法，提供统一的接口、完善的测试、丰富的文档，以及现代化的Web可视化界面。支持**单目标优化**和**多目标优化**两大类问题。
 
-### 核心特性
+### ✨ 核心特性
 
-- 🎯 **统一接口**: 所有算法继承 `BaseAlgorithm`/`MOBaseAlgorithm` 基类，遵循相同的使用模式
-- 🔌 **可扩展性**: 采用注册表模式，新增算法无需修改核心代码
-- 📊 **Web可视化**: 现代化React前端，支持算法对比、参数调整、实时进度
-- 🚀 **RESTful API**: FastAPI后端，支持单次优化、批量任务、WebSocket实时通信
-- ✅ **高质量**: 代码符合 `metaheuristic_spec.md` 规范，包含完整文档和单元测试
-- 📈 **标准测试**: 单目标23个 + 鲁棒8个 + 多目标13个国际通用基准测试函数
-- 🔬 **多目标支持**: 5种多目标优化算法，支持ZDT/DTLZ测试集和完整性能指标
-- ⚡ **性能优化**: 存档更新算法O(n log n)、Hypervolume计算支持高维快速近似
+| 特性 | 描述 |
+|:----:|:-----|
+| 🎯 **统一接口** | 所有算法继承 `BaseAlgorithm`/`MOBaseAlgorithm` 基类，遵循相同的使用模式 |
+| 🔌 **可扩展性** | 采用注册表模式，新增算法无需修改核心代码 |
+| 📊 **Web可视化** | 现代化React前端，支持算法对比、参数调整、实时进度 |
+| 🚀 **RESTful API** | FastAPI后端，支持单次优化、批量任务、WebSocket实时通信 |
+| ✅ **高质量** | 代码符合 `metaheuristic_spec.md` 规范，包含完整文档和单元测试 |
+| 📈 **标准测试** | 单目标23个 + 鲁棒8个 + 多目标13个国际通用基准测试函数 |
+| 🔬 **多目标支持** | 5种多目标优化算法，支持ZDT/DTLZ测试集和完整性能指标 |
+| ⚡ **性能优化** | 存档更新算法O(n log n)、Hypervolume计算支持高维快速近似 |
+| 🗺️ **应用问题** | 支持MD-MTSP等实际应用场景问题 |
 
 ---
 
-## 技术架构
+## 📐 技术架构
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -51,7 +62,7 @@
 └─────────────────────────────────────────────────────────────┘
 ```
 
-### 技术栈
+### 🛠 技术栈
 
 | 层级 | 技术 | 说明 |
 |------|------|------|
@@ -66,7 +77,7 @@
 
 ---
 
-## 目录结构
+## 📁 目录结构
 
 ```
 元启发优化算法验证/
@@ -109,6 +120,8 @@
 │           └── ArchiveManager.m
 │
 ├── problems/                      # 问题定义
+│   ├── application/
+│   │   └── MDMTSPProblem.m        # 多仓库多旅行商问题
 │   └── benchmark/
 │       ├── BenchmarkFunctions.m   # 23个单目标基准测试函数
 │       ├── RobustBenchmarkFunctions.m  # 8个鲁棒基准测试函数
@@ -173,11 +186,11 @@
 
 ---
 
-## 已实现算法
+## 🧮 已实现算法
 
 本项目共实现 **25** 种元启发式优化算法：
 
-### 单目标优化算法 (20个)
+### 🎯 单目标优化算法 (20个)
 
 | 算法 | 全称 | 类别 | 参考文献 |
 |------|------|------|----------|
@@ -202,7 +215,7 @@
 | PSOGSA | Hybrid PSO-GSA Algorithm | 混合 | Mirjalili, 2010 |
 | HLBDA | Hyper Learning Binary Dragonfly Algorithm | 群智能 | 2024 |
 
-### 多目标优化算法 (5个)
+### 🎯 多目标优化算法 (5个)
 
 | 算法 | 全称 | 参考文献 |
 |------|------|----------|
@@ -214,7 +227,7 @@
 
 ---
 
-## 测试问题集
+## 🧪 测试问题集
 
 ### 单目标基准函数 (23个)
 
@@ -224,7 +237,7 @@
 | F8-F13 | 多峰 | 30 | -12569.487 ~ 0 |
 | F14-F23 | 固定维度 | 2-6 | 各异 |
 
-### 鲁棒基准函数 (8个)
+### 🛡️ 鲁棒基准函数 (8个)
 
 这些函数专门设计用于测试优化算法的鲁棒性，包含各种障碍和困难。
 
@@ -241,7 +254,7 @@
 
 **参考文献**: S. Mirjalili, A. Lewis, "Obstacles and difficulties for robust benchmark problems", Information Sciences, 2016
 
-### 多目标测试问题 (13个)
+### 🎯 多目标测试问题 (13个)
 
 #### ZDT系列 (2目标)
 | 问题 | 维度 | Pareto前沿特性 |
@@ -264,7 +277,7 @@
 | DTLZ6 | 可变 | 强偏置 |
 | DTLZ7 | 可变 | 不连续前沿 |
 
-### 多目标性能指标
+### 📊 多目标性能指标
 
 | 指标 | 全称 | 说明 | 复杂度 |
 |------|------|------|--------|
@@ -275,9 +288,51 @@
 | Spread | Δ | 扩展度，越小越好 | O(n²) |
 | C-metric | Set Coverage | 集合覆盖度 | O(n×m) |
 
+### 📦 应用问题
+
+#### MD-MTSP (多仓库多旅行商问题)
+
+多仓库多旅行商问题（Multi-Depot Multiple Travelling Salesman Problem）是经典TSP问题的扩展，模拟物流配送、车辆路径规划等实际应用场景。
+
+**问题特性**:
+- 类型: 组合优化问题（NP-hard）
+- 目标: 最小化所有旅行商的总路径长度
+- 约束: 多仓库、多旅行商、路径连续性
+
+**使用示例**:
+```matlab
+% 创建默认问题
+problem = MDMTSPProblem();
+
+% 创建自定义问题
+problem = MDMTSPProblem('num_cities', 20, 'num_depots', 3, ...
+    'travelers_per_depot', [2, 2, 2]);
+
+% 评估解
+x = rand(1, problem.dimension) * problem.upperBound;
+fitness = problem.evaluate(x);
+
+% 获取路径详情
+[fitness, routes, assignment] = problem.evaluateWithRoutes(x);
+
+% 查看问题信息
+info = problem.getProblemInfo();
+fprintf('城市数: %d, 仓库数: %d, 旅行商总数: %d\n', ...
+    info.num_cities, info.num_depots, info.total_travelers);
+```
+
+**参数说明**:
+| 参数 | 类型 | 默认值 | 说明 |
+|------|------|--------|------|
+| num_cities | int64 | 15 | 城市数量 |
+| num_depots | int64 | 2 | 仓库数量 |
+| travelers_per_depot | int64 vector | [2, 2] | 各仓库旅行商数量 |
+| area_size | double | 200 | 区域大小 |
+| random_seed | int64 | 0 | 随机种子(0=不设置) |
+
 ---
 
-## 快速开始
+## 🚀 快速开始
 
 ### 方式一：一键启动（推荐）
 
@@ -409,7 +464,7 @@ fprintf('函数类型: %s, 描述: %s\n', info.type, info.description);
 
 ---
 
-## Web界面功能
+## 💻 Web界面功能
 
 ### 首页
 - 平台概览和统计数据
@@ -434,12 +489,9 @@ fprintf('函数类型: %s, 描述: %s\n', info.type, info.description);
 ### 历史记录
 - 优化运行历史
 - 结果对比分析
-
 ---
 
-## API接口
-
-### 算法管理
+## 🔌 API接口### 算法管理
 ```
 GET  /api/v1/algorithms           # 获取算法列表
 GET  /api/v1/algorithms/{id}      # 获取算法定义
@@ -447,28 +499,28 @@ GET  /api/v1/algorithms/{id}/schema  # 获取参数模式
 ```
 
 ### 基准函数
-```
-GET  /api/v1/benchmarks           # 获取测试函数列表
-GET  /api/v1/benchmarks/{id}      # 获取函数详情
-```
+  ```
+  GET  /api/v1/benchmarks           # 获取测试函数列表
+  GET  /api/v1/benchmarks/{id}      # 获取函数详情
+  ```
 
 ### 优化执行
-```
-POST /api/v1/optimize/single      # 单次优化
-POST /api/v1/optimize/compare     # 算法对比
-POST /api/v1/optimize/batch       # 批量任务
-```
+  ```
+  POST /api/v1/optimize/single      # 单次优化
+  POST /api/v1/optimize/compare     # 算法对比
+  POST /api/v1/optimize/batch       # 批量任务
+  ```
 
 ### 任务管理
-```
-GET  /api/v1/tasks/{taskId}       # 获取任务状态
-DELETE /api/v1/tasks/{taskId}     # 取消任务
-WS   /ws/tasks/{taskId}           # WebSocket实时进度
-```
+  ```
+  GET  /api/v1/tasks/{taskId}       # 获取任务状态
+  DELETE /api/v1/tasks/{taskId}     # 取消任务
+  WS   /ws/tasks/{taskId}           # WebSocket实时进度
+  ````
 
 ---
 
-## 开发规范
+## 📜 开发规范
 
 本项目严格遵循 `metaheuristic_spec.md` 规范，包括:
 
@@ -483,17 +535,17 @@ WS   /ws/tasks/{taskId}           # WebSocket实时进度
 
 ---
 
-## 系统要求
+## ⚙️ 系统要求
 
-### MATLAB运行环境
+### 💻 MATLAB运行环境
 - MATLAB R2020b 或更高版本
 - 无需额外工具箱
 
-### Web前端开发环境
+### 🌐 Web前端开发环境
 - Node.js 18+ 和 npm 9+
 - 现代浏览器 (Chrome, Firefox, Safari, Edge)
 
-### 前端测试
+### 🧪 前端测试
 ```bash
 cd web-frontend
 
@@ -510,25 +562,19 @@ npm run test:watch
 npm run test:coverage
 ```
 
-### 后端API环境
-- Python 3.10+
-- MATLAB Engine API for Python（可选，无MATLAB时使用模拟模式）
+### ⚙️ 注意事项
 
----
-
-## 注意事项
-
-### 算法参数配置
+#### 📊 算法参数配置
 - `populationSize` 建议范围：20-100，最小值10
-- `maxIterations` 建议范围：100-1000
+- `maxIterations` 建议范围:100-1000
 - 多目标算法的 `archiveMaxSize` 建议与种群大小相同
 
-### 性能建议
+#### 🚀 性能建议
 - 高维问题(>30维)建议增加种群大小和迭代次数
 - 多目标问题建议使用至少100次迭代以获得良好的Pareto前沿
 - Hypervolume计算在高维(>3目标)时自动使用蒙特卡洛近似
 
-### 常见问题
+#### ❓ 常见问题
 1. **MATLAB路径问题**: 运行前确保已添加项目根目录到MATLAB路径
    ```matlab
    addpath(genpath('your/project/path'));
@@ -540,7 +586,7 @@ npm run test:coverage
 
 ---
 
-## 许可证
+## 📄 许可证
 
 本项目代码采用 BSD 2-Clause 许可证。
 
@@ -548,22 +594,35 @@ npm run test:coverage
 
 ---
 
-## 致谢
+## 🙏 致谢
 
 本项目的算法实现基于以下研究者的原创工作：
 
-- **Seyedali Mirjalili** - ALO, GWO, WOA, DA, BBA, MFO, MVO, SCA, SSA, PSOGSA, MOALO, MODA, MOGOA, MOGWO, MSSA 等算法发明者
-- **S. Saremi, A. Lewis** - GOA 蚱蜢优化算法发明者
-- **M. H. Nadimi-Shahraki et al.** - IGWO, EWOA算法发明者
-- **E. Zitzler et al.** - ZDT测试问题集
-- **K. Deb et al.** - DTLZ测试问题集
-- **S. Mirjalili, A. Lewis** - 鲁棒基准测试问题集
+| 研究者 | 贡献 |
+|--------|------|
+| **Seyedali Mirjalili** | ALO, GWO, WOA, DA, BBA, MFO, MVO, SCA, SSA, PSOGSA, MOALO, MODA, MOGOA, MOGWO, MSSA 等算法发明者 |
+| **S. Saremi, A. Lewis** | GOA 蚱蜢优化算法发明者 |
+| **M. H. Nadimi-Shahraki et al.** | IGWO, EWOA算法发明者 |
+| **E. Zitzler et al.** | ZDT测试问题集 |
+| **K. Deb et al.** | DTLZ测试问题集 |
+| **S. Mirjalili, A. Lewis** | 鲁棒基准测试问题集 |
 
 感谢他们为元启发式优化领域做出的贡献。
 
 ---
 
 ## 更新日志
+
+### v2.4.0 (2026年3月)
+- ✨ **新增应用问题**: 多仓库多旅行商问题(MD-MTSP)
+  - 支持多仓库、多旅行商配置
+  - 2-opt局部优化
+  - 适配优化框架接口
+- 🔧 **代码修复**: 修复MDMTSPProblem类语法错误和命名冲突
+  - 修复int64[]属性声明语法错误
+  - 重命名局部变量避免与Dependent属性冲突
+  - 移除测试文件中未使用变量
+- 🧪 **测试完善**: 新增MDMTSPProblem单元测试
 
 ### v2.3.0 (2026年3月)
 - ✨ **新增鲁棒基准测试函数**: 8个专门测试算法鲁棒性的基准函数

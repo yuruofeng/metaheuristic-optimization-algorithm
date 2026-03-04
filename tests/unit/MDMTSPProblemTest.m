@@ -154,7 +154,6 @@ classdef MDMTSPProblemTest < matlab.unittest.TestCase
             
             improved = false;
             best_fitness = fitness_before;
-            best_solution = solution;
             
             for i = 1:10
                 new_solution = solution + rand(1, 10) * 0.1;
@@ -162,7 +161,6 @@ classdef MDMTSPProblemTest < matlab.unittest.TestCase
                 [fitness_new, ~] = problem.computeFitnessAndRoutes(new_solution);
                 if fitness_new < best_fitness
                     best_fitness = fitness_new;
-                    best_solution = new_solution;
                     improved = true;
                 end
             end

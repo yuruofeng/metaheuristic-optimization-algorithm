@@ -36,7 +36,7 @@ classdef MDMTSPProblem < handle
         % 问题参数
         num_cities int64 = 15         % 城市数量
         num_depots int64 = 2          % 仓库数量
-        travelers_per_depot int64[] = [2, 2]  % 各仓库旅行商数量
+        travelers_per_depot int64 = [2, 2]  % 各仓库旅行商数量
         area_size double = 200        % 区域大小
         
         % 位置数据
@@ -213,16 +213,16 @@ classdef MDMTSPProblem < handle
         function [fitness, routes, assignment] = computeFitnessAndRoutes(obj, solution)
             % computeFitnessAndRoutes 计算适应度和路径
 
-            total_travelers = sum(obj.travelers_per_depot);
+            num_travelers = sum(obj.travelers_per_depot);
             
             % 解码：将连续值转换为旅行商分配
-            assignment = ceil(solution * total_travelers / obj.upperBound);
-            assignment = min(max(assignment, 1), total_travelers);
+            assignment = ceil(solution * num_travelers / obj.upperBound);
+            assignment = min(max(assignment, 1), num_travelers);
 
             total_distance = 0;
-            routes = cell(1, total_travelers);
+            routes = cell(1, num_travelers);
 
-            for traveler_idx = 1:total_travelers
+            for traveler_idx = 1:num_travelers
                 % 找到对应的仓库
                 depot_idx = obj.getDepotForTraveler(traveler_idx);
 

@@ -102,15 +102,34 @@ class RobustBenchmarkFunction(BaseModel):
     description: Optional[str] = None
 
 
+class MDMTSPFunction(BaseModel):
+    """MD-MTSP应用问题函数"""
+    id: str
+    name: str
+    type: Literal["application"] = "application"
+    subtype: Literal["MDMTSP"] = "MDMTSP"
+    dimension: int
+    lowerBound: float
+    upperBound: float
+    numCities: int = Field(ge=2, description="城市数量")
+    numDepots: int = Field(ge=1, description="仓库数量")
+    travelersPerDepot: List[int] = Field(description="各仓库旅行商数量")
+    totalTravelers: int = Field(description="总旅行商数量")
+    areaSize: int = Field(description="区域大小")
+    description: Optional[str] = None
+
+
 # ==================== 请求/响应模型 ====================
 
 class ProblemDefinition(BaseModel):
     """问题定义"""
     id: str
-    type: Literal["benchmark", "custom"] = "benchmark"
+    type: Literal["benchmark", "robust", "application"] = "benchmark"
+    subtype: Optional[str] = None
     dimension: int
     lowerBound: Union[float, List[float]]
     upperBound: Union[float, List[float]]
+    config: Optional[Dict] = None
 
 
 class OptimizationRequest(BaseModel):

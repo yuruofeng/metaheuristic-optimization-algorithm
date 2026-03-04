@@ -93,13 +93,32 @@ export interface RobustBenchmarkFunction {
   description: string;
 }
 
+// MDMTSP应用问题类型
+export interface MDMTSPFunction {
+  id: string;
+  name: string;
+  type: 'application';
+  subtype: 'MDMTSP';
+  dimension: number;
+  lowerBound: number;
+  upperBound: number;
+  numCities: number;
+  numDepots: number;
+  travelersPerDepot: number[];
+  totalTravelers: number;
+  areaSize: number;
+  description?: string;
+}
+
 // 问题定义
 export interface ProblemDefinition {
   id: string;
-  type: 'benchmark' | 'custom';
+  type: 'benchmark' | 'robust' | 'application';
+  subtype?: string;
   dimension: number;
   lowerBound: number | number[];
   upperBound: number | number[];
+  config?: Record<string, unknown>;
 }
 
 // 优化请求

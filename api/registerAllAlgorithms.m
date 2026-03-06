@@ -47,12 +47,27 @@ function registerAllAlgorithms()
     % 二进制算法（新增）
     HLBDA.register();  % 超学习二进制蜻蜓算法
 
-    % 多目标优化算法（新增）
+    % 第一阶段新增算法 (2025-03)
+    HGS.register();    % 饥饿游戏搜索算法
+    AO.register();     % 天鹰优化器
+
+    % 第二阶段新增算法 (2025-03)
+    MPA.register();    % 海洋捕食者算法
+    GTO.register();    % 大猩猩部队优化器
+    MOEAD.register();  % 基于分解的多目标进化算法
+
+    % 第三阶段新增算法 (2025-03)
+    AVOA.register();   % 非洲秃鹫优化算法
+    KOA.register();    % 开普勒优化算法
+    RIME.register();   % 雾凇优化算法
+
+    % 多目标优化算法
     MOALO.register();  % 多目标蚁狮优化器
     MODA.register();   % 多目标蜻蜓算法
     MOGOA.register();  % 多目标蚱蜢优化算法
     MOGWO.register();  % 多目标灰狼优化器
     MSSA.register();   % 多目标樽海鞘群算法
+    NSGAIII.register(); % 非支配排序遗传算法III
 
     % 输出注册信息
     algorithms = AlgorithmRegistry.listAlgorithms();

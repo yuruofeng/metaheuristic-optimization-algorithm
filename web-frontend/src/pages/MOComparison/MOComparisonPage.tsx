@@ -265,10 +265,10 @@ export function MOComparisonPage() {
   }, [selectedProblem]);
 
   return (
-    <div style={{ padding: 24 }}>
-      <div style={{ marginBottom: 24 }}>
-        <Title level={2} style={{ marginBottom: 8 }}>多目标优化对比</Title>
-        <Text type="secondary">选择多个多目标优化算法进行Pareto前沿性能对比分析</Text>
+    <div className="comparison-page">
+      <div className="comparison-page__header">
+        <Title level={2} className="comparison-page__title">多目标优化对比</Title>
+        <Text type="secondary" className="comparison-page__description">选择多个多目标优化算法进行Pareto前沿性能对比分析</Text>
       </div>
 
       <Row gutter={[24, 24]}>
@@ -283,10 +283,30 @@ export function MOComparisonPage() {
               }
               extra={
                 <Space>
-                  <Button icon={<CheckOutlined />} onClick={selectAll}>
+                  <Button
+                    icon={<CheckOutlined />}
+                    onClick={selectAll}
+                    className="algorithm-btn-enhanced"
+                    style={{
+                      height: 56,
+                      fontSize: 16,
+                      padding: '12px 24px',
+                      borderRadius: 8,
+                    }}
+                  >
                     全选
                   </Button>
-                  <Button icon={<CloseOutlined />} onClick={clearSelection}>
+                  <Button
+                    icon={<CloseOutlined />}
+                    onClick={clearSelection}
+                    className="algorithm-btn-enhanced"
+                    style={{
+                      height: 56,
+                      fontSize: 16,
+                      padding: '12px 24px',
+                      borderRadius: 8,
+                    }}
+                  >
                     清空
                   </Button>
                 </Space>
@@ -297,13 +317,17 @@ export function MOComparisonPage() {
                   <Tag
                     key={alg.id}
                     color={selectedIds.includes(alg.id) ? getMOAlgorithmColor(alg.id) : 'default'}
+                    className="algorithm-tag-enhanced"
                     style={{
-                      height: 40,
-                      fontSize: 14,
-                      padding: '8px 16px',
-                      margin: '4px',
-                      borderRadius: 6,
+                      height: 48,
+                      fontSize: 16,
+                      padding: '10px 20px',
+                      margin: '8px',
+                      borderRadius: 8,
                       cursor: 'pointer',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      minWidth: 100,
                     }}
                     onClick={() => toggleAlgorithm(alg.id)}
                   >

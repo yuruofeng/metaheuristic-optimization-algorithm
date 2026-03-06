@@ -385,3 +385,232 @@ body {
     margin: 4px !important;
   }
 }
+
+/* ========================================
+   页面统一样式配置
+   ======================================== */
+
+.comparison-page {
+  padding: 24px;
+}
+
+.comparison-page__header {
+  margin-bottom: 24px;
+}
+
+.comparison-page__title {
+  margin-bottom: 8px !important;
+  font-size: 24px !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+}
+
+.comparison-page__description {
+  font-size: 14px !important;
+  line-height: 1.5714 !important;
+}
+
+.comparison-page__card-title {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.comparison-page__section-label {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+.comparison-page__result-text {
+  font-size: 14px !important;
+}
+
+.comparison-page__hint-text {
+  font-size: 14px !important;
+  line-height: 1.5714 !important;
+}
+
+.comparison-page__statistic-title {
+  font-size: 14px !important;
+}
+
+.comparison-page__statistic-value {
+  font-size: 14px !important;
+}
+
+.comparison-page__statistic-hint {
+  font-size: 12px !important;
+}
+
+.comparison-page__tab-label {
+  font-size: 14px !important;
+}
+
+.comparison-page__button-primary {
+  height: 56px !important;
+  font-size: 16px !important;
+  padding: 12px 24px !important;
+  border-radius: 8px !important;
+}
+
+.comparison-page__button-secondary {
+  height: 48px !important;
+  font-size: 14px !important;
+  padding: 10px 20px !important;
+  border-radius: 8px !important;
+}
+
+.comparison-page__tag {
+  height: 48px !important;
+  font-size: 16px !important;
+  padding: 10px 20px !important;
+  margin: 8px !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  min-width: 100px !important;
+}
+
+.comparison-page__counter-tag {
+  font-size: 12px !important;
+  font-weight: 500 !important;
+}
+
+.comparison-page__input-label {
+  font-size: 14px !important;
+  margin-bottom: 4px !important;
+  display: block !important;
+}
+
+.comparison-page__info-row {
+  display: flex !important;
+  justify-content: space-between !important;
+  font-size: 14px !important;
+}
+
+.comparison-page__info-label {
+  font-size: 14px !important;
+}
+
+.comparison-page__info-value {
+  font-size: 14px !important;
+}
+
+.comparison-page__switch-label {
+  font-size: 14px !important;
+}
+
+/* 深色模式页面样式 */
+.dark .comparison-page__title {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.dark .comparison-page__description {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.dark .comparison-page__section-label {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.dark .comparison-page__hint-text {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.dark .comparison-page__info-label {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* 响应式页面样式 */
+@media (max-width: 768px) {
+  .comparison-page {
+    padding: 16px;
+  }
+
+  .comparison-page__title {
+    font-size: 20px !important;
+  }
+
+  .comparison-page__description {
+    font-size: 13px !important;
+  }
+
+  .comparison-page__tag {
+    height: 40px !important;
+    font-size: 14px !important;
+    padding: 8px 16px !important;
+    min-width: 80px !important;
+    margin: 4px !important;
+  }
+
+  .comparison-page__button-primary {
+    height: 48px !important;
+    font-size: 14px !important;
+    padding: 10px 20px !important;
+  }
+
+  .comparison-page__button-secondary {
+    height: 40px !important;
+    font-size: 13px !important;
+    padding: 8px 16px !important;
+  }
+
+  .comparison-page__card-title {
+    font-size: 15px !important;
+  }
+
+  .comparison-page__section-label {
+    font-size: 13px !important;
+  }
+
+  .comparison-page__result-text,
+  .comparison-page__hint-text,
+  .comparison-page__info-label,
+  .comparison-page__info-value {
+    font-size: 13px !important;
+  }
+
+  .comparison-page__statistic-title,
+  .comparison-page__statistic-value {
+    font-size: 13px !important;
+  }
+
+  .comparison-page__statistic-hint {
+    font-size: 11px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .comparison-page {
+    padding: 12px;
+  }
+
+  .comparison-page__title {
+    font-size: 18px !important;
+  }
+
+  .comparison-page__description {
+    font-size: 12px !important;
+  }
+
+  .comparison-page__tag {
+    height: 36px !important;
+    font-size: 13px !important;
+    padding: 6px 12px !important;
+    min-width: 70px !important;
+  }
+
+  .comparison-page__button-primary {
+    height: 44px !important;
+    font-size: 14px !important;
+    padding: 8px 16px !important;
+  }
+
+  .comparison-page__button-secondary {
+    height: 36px !important;
+    font-size: 12px !important;
+    padding: 6px 12px !important;
+  }
+}
